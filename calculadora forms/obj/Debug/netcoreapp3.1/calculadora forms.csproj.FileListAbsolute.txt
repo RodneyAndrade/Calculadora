@@ -1,0 +1,15 @@
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.exe
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.deps.json
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.runtimeconfig.json
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.runtimeconfig.dev.json
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.dll
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.pdb
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.csprojAssemblyReference.cache
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora_forms.Form1.resources
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.csproj.GenerateResource.cache
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.AssemblyInfoInputs.cache
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.AssemblyInfo.cs
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.csproj.CoreCompileInputs.cache
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.dll
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.pdb
+C:\Users\Rodney\source\repos\calculadora forms\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.genruntimeconfig.cache
