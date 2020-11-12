@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rodney\\source\\repos\\calculadora forms\\calculadora forms\\calculadora forms.csproj",
+      "projectUniqueName": "C:\\source\\repos\\Calculadora\\calculadora forms\\calculadora forms.csproj",
       "projectName": "calculadora forms",
-      "projectPath": "C:\\Users\\Rodney\\source\\repos\\calculadora forms\\calculadora forms\\calculadora forms.csproj",
+      "projectPath": "C:\\source\\repos\\Calculadora\\calculadora forms\\calculadora forms.csproj",
       "packagesPath": "C:\\Users\\Rodney\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rodney\\source\\repos\\calculadora forms\\calculadora forms\\obj\\",
+      "outputPath": "C:\\source\\repos\\Calculadora\\calculadora forms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Rodney\\AppData\\Roaming\\NuGet\\NuGet.Config",

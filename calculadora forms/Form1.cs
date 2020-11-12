@@ -143,7 +143,7 @@ namespace calculadora_forms
                     if (i2 == 0)
                     {
                         resultado = "Não dividirás por zero!";
-                        label1.Text = Convert.ToString(resultadoMatematico);
+                        label1.Text = resultadoMatematico.ToString();
                         break;
                     }
                     resultadoMatematico = i1 / i2;
