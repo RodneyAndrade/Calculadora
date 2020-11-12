@@ -13,15 +13,13 @@ namespace calculadora_forms
     public partial class Form1 : Form
     {
         private decimal resultadoMatematico;
-        private decimal i1;
-        private decimal i2;
-        private string resultado;
+        private decimal primeiroVAlor;
+        private decimal segundoValor;
         private string s1;
         private string s2;
-        private string s3;
         //ponto que vai ser utilizado
         private string ponto;
-        private int qvqae = 1;
+        private int passos = 1;
         private int pontoum;
 
         public Form1()
@@ -29,22 +27,22 @@ namespace calculadora_forms
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSoma(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 2;
+                passos = 2;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            qvqae = 2;
-            if (qvqae == 2)
+            passos = 2;
+            if (passos == 2)
             {
                 ponto = "+";
                 pontoum = 1;
@@ -53,22 +51,22 @@ namespace calculadora_forms
             }
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void btnDivisao(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 2;
+                passos = 2;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            qvqae = 2;
-            if (qvqae == 2)
+            passos = 2;
+            if (passos == 2)
             {
                 ponto = "/";
                 pontoum = 2;
@@ -78,22 +76,22 @@ namespace calculadora_forms
             }
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void btnMultiplicacao(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 2;
+                passos = 2;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            qvqae = 2;
-            if (qvqae == 2)
+            passos = 2;
+            if (passos == 2)
             {
                 ponto = "*";
                 pontoum = 3;
@@ -102,22 +100,22 @@ namespace calculadora_forms
             }
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void btnSubtracao(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 2;
+                passos = 2;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            qvqae = 2;
-            if (qvqae == 2)
+            passos = 2;
+            if (passos == 2)
             {
                 ponto = "-";
                 pontoum = 4;
@@ -127,130 +125,102 @@ namespace calculadora_forms
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnIgual(object sender, EventArgs e)
         {
             // funcao que diz qual vai ser o resultado pela funçao matematica
             switch (ponto)
             {
                 case ("+"):
-                    resultadoMatematico = i1 + i2;
-                    label1.Text = resultadoMatematico.ToString();
-                    //resultado = resultadoMatematico.ToString();
-
+                    resultadoMatematico = primeiroVAlor + segundoValor;
                     break;
+
                 case ("/"):
-                    //label1.Text = resultado;
-                    if (i2 == 0)
+                    if (segundoValor == 0)
                     {
-                        resultado = "Não dividirás por zero!";
-                        label1.Text = resultadoMatematico.ToString();
+                        label1.Text = "Não dividirás por zero!";
                         break;
                     }
-                    resultadoMatematico = i1 / i2;
-                    label1.Text = Convert.ToString(resultadoMatematico);
+                    resultadoMatematico = primeiroVAlor / segundoValor;
                     break;
+
                 case ("*"):
-                    label1.Text = resultado;
-                    resultado = Convert.ToString(resultadoMatematico);
-                    resultadoMatematico = i1 * i2;
+                    resultadoMatematico = primeiroVAlor * segundoValor;
                     break;
+
                 case ("-"):
-                    label1.Text = resultado;
-                    resultado = Convert.ToString(resultadoMatematico);
-                    resultadoMatematico = i1 - i2;
+                    resultadoMatematico = primeiroVAlor - segundoValor;
                     break;
             }
 
+            primeiroVAlor = resultadoMatematico;
+            
+            label1.Text = resultadoMatematico.ToString();
             Pnumero.Text = string.Empty;
 
-            //if (ponto == "+" )
-            //{
-            //    label1.Text = s;
-            //    s = Convert.ToString(f);
-            //    f = i1 + i2;
-            //}
-            //if (ponto == "/" )
-            //{
-            //    label1.Text = s;
-            //    s = Convert.ToString(f);
-            //    f = i1 / i2;
-            //}
-            //if (ponto == "*" )
-            //{
-            //    label1.Text = s;
-            //    s = Convert.ToString(f);
-            //    f = i1 * i2;
-            //}
-            //if (ponto == "-"  )
-            //{
-            //    label1.Text = s;
-            //    s = Convert.ToString(f);
-            //    f = i1 - i2;
-            //}
-            if (qvqae >= 4)
+            if (passos >= 4)
             {
-                qvqae = 0;
+                passos = 0;
             }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnTres(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 3;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 3;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 3;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 3;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
             }
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void btnUm(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 1;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 1;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 1;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 1;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
@@ -258,32 +228,32 @@ namespace calculadora_forms
 
         }
 
-        private void botao1_Click(object sender, EventArgs e)
+        private void btnNove(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 9;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 9;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 9;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 9;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
@@ -293,30 +263,30 @@ namespace calculadora_forms
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 8;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 8;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 8;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 8;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
@@ -325,32 +295,32 @@ namespace calculadora_forms
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnSete(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 7;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 7;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 7;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 7;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
@@ -358,160 +328,160 @@ namespace calculadora_forms
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSeis(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 6;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 6;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 6;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 6;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnCinco(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
 
-                i1 = (i1 * 10) + 5;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 5;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 5;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 5;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnQuatro(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 4;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 4;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 4;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 4;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
             }
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void btnDois(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 = (i1 * 10) + 2;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor = (primeiroVAlor * 10) + 2;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 = (i2 * 10) + 2;
-                s2 = Convert.ToString(i2);
+                segundoValor = (segundoValor * 10) + 2;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
             }
         }
-        private void button11_Click(object sender, EventArgs e)
+        private void btnZero(object sender, EventArgs e)
         {
-            if (qvqae == 3)
+            if (passos == 3)
             {
-                qvqae = 1;
+                passos = 1;
 
-                i1 = Convert.ToInt32(resultadoMatematico);
+                primeiroVAlor = Convert.ToInt32(resultadoMatematico);
                 resultadoMatematico = 0;
-                i2 = 0;
+                segundoValor = 0;
                 Pnumero.Text = "";
                 ponto = "";
-                s1 = Convert.ToString(i1);
+                s1 = Convert.ToString(primeiroVAlor);
                 label1.Text = "0"; label2.Text = s1; label3.Text = "0"; label5.Text = "";
             }
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 *= 10;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor *= 10;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 *= 10;
-                s2 = Convert.ToString(i2);
+                segundoValor *= 10;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
@@ -520,18 +490,18 @@ namespace calculadora_forms
 
         private void button15_Click(object sender, EventArgs e)
         {
-            if (qvqae == 1)
+            if (passos == 1)
             {
-                i1 *= -1;
-                s1 = Convert.ToString(i1);
+                primeiroVAlor *= -1;
+                s1 = Convert.ToString(primeiroVAlor);
                 label2.Text = s1;
                 Pnumero.Text = s1;
             }
-            if (qvqae == 2)
+            if (passos == 2)
             {
                 Pnumero.Text = "";
-                i2 *= -1;
-                s2 = Convert.ToString(i2);
+                segundoValor *= -1;
+                s2 = Convert.ToString(segundoValor);
                 label3.Text = s2;
 
                 Pnumero.Text = s2;
@@ -540,9 +510,9 @@ namespace calculadora_forms
 
         private void button17_Click(object sender, EventArgs e)
         {
-            qvqae = 1;
-            i1 = 0;
-            i2 = 0;
+            passos = 1;
+            primeiroVAlor = 0;
+            segundoValor = 0;
             Pnumero.Text = "";
             ponto = "";
             label1.Text = "0"; label2.Text = "0"; label3.Text = "0"; label5.Text = "";
