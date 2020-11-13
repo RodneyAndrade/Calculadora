@@ -87,7 +87,7 @@
             this.botaoNove.TabIndex = 5;
             this.botaoNove.Text = "9";
             this.botaoNove.UseVisualStyleBackColor = true;
-            this.botaoNove.Click += new System.EventHandler(this.BtnNove);
+            this.botaoNove.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoOito
             // 
@@ -97,7 +97,7 @@
             this.botaoOito.TabIndex = 6;
             this.botaoOito.Text = "8";
             this.botaoOito.UseVisualStyleBackColor = true;
-            this.botaoOito.Click += new System.EventHandler(this.BtnOito);
+            this.botaoOito.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoSeis
             // 
@@ -107,7 +107,7 @@
             this.botaoSeis.TabIndex = 7;
             this.botaoSeis.Text = "6";
             this.botaoSeis.UseVisualStyleBackColor = true;
-            this.botaoSeis.Click += new System.EventHandler(this.BtnSeis);
+            this.botaoSeis.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoCinco
             // 
@@ -117,7 +117,7 @@
             this.botaoCinco.TabIndex = 5;
             this.botaoCinco.Text = "5";
             this.botaoCinco.UseVisualStyleBackColor = true;
-            this.botaoCinco.Click += new System.EventHandler(this.BtnCinco);
+            this.botaoCinco.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoSete
             // 
@@ -127,7 +127,7 @@
             this.botaoSete.TabIndex = 5;
             this.botaoSete.Text = "7";
             this.botaoSete.UseVisualStyleBackColor = true;
-            this.botaoSete.Click += new System.EventHandler(this.BtnSete);
+            this.botaoSete.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoQuatro
             // 
@@ -137,7 +137,7 @@
             this.botaoQuatro.TabIndex = 5;
             this.botaoQuatro.Text = "4";
             this.botaoQuatro.UseVisualStyleBackColor = true;
-            this.botaoQuatro.Click += new System.EventHandler(this.BtnQuatro);
+            this.botaoQuatro.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoDois
             // 
@@ -147,7 +147,7 @@
             this.botaoDois.TabIndex = 5;
             this.botaoDois.Text = "2";
             this.botaoDois.UseVisualStyleBackColor = true;
-            this.botaoDois.Click += new System.EventHandler(this.BtnDois);
+            this.botaoDois.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoTres
             // 
@@ -157,7 +157,7 @@
             this.botaoTres.TabIndex = 5;
             this.botaoTres.Text = "3";
             this.botaoTres.UseVisualStyleBackColor = true;
-            this.botaoTres.Click += new System.EventHandler(this.BtnTres);
+            this.botaoTres.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoUm
             // 
@@ -167,7 +167,7 @@
             this.botaoUm.TabIndex = 5;
             this.botaoUm.Text = "1";
             this.botaoUm.UseVisualStyleBackColor = true;
-            this.botaoUm.Click += new System.EventHandler(this.BtnUm);
+            this.botaoUm.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // botaoZero
             // 
@@ -177,7 +177,7 @@
             this.botaoZero.TabIndex = 5;
             this.botaoZero.Text = "0";
             this.botaoZero.UseVisualStyleBackColor = true;
-            this.botaoZero.Click += new System.EventHandler(this.BtnZero);
+            this.botaoZero.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // lblPrimeiroValor
             // 
@@ -263,7 +263,7 @@
             this.botaoClear.TabIndex = 18;
             this.botaoClear.Text = "C";
             this.botaoClear.UseVisualStyleBackColor = true;
-            this.botaoClear.Click += new System.EventHandler(this.BtnClear);
+            this.botaoClear.Click += new System.EventHandler(this.BtnLimpar);
             // 
             // Form1
             // 
