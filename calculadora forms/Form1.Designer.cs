@@ -60,7 +60,7 @@
             this.botaoIgual.TabIndex = 0;
             this.botaoIgual.Text = "=";
             this.botaoIgual.UseVisualStyleBackColor = true;
-            this.botaoIgual.Click += new System.EventHandler(this.btnIgual);
+            this.botaoIgual.Click += new System.EventHandler(this.BtnIgual);
             // 
             // Pnumero
             // 
@@ -87,7 +87,7 @@
             this.botaoNove.TabIndex = 5;
             this.botaoNove.Text = "9";
             this.botaoNove.UseVisualStyleBackColor = true;
-            this.botaoNove.Click += new System.EventHandler(this.btnNove);
+            this.botaoNove.Click += new System.EventHandler(this.BtnNove);
             // 
             // botaoOito
             // 
@@ -97,7 +97,7 @@
             this.botaoOito.TabIndex = 6;
             this.botaoOito.Text = "8";
             this.botaoOito.UseVisualStyleBackColor = true;
-            this.botaoOito.Click += new System.EventHandler(this.btnOito);
+            this.botaoOito.Click += new System.EventHandler(this.BtnOito);
             // 
             // botaoSeis
             // 
@@ -107,7 +107,7 @@
             this.botaoSeis.TabIndex = 7;
             this.botaoSeis.Text = "6";
             this.botaoSeis.UseVisualStyleBackColor = true;
-            this.botaoSeis.Click += new System.EventHandler(this.btnSeis);
+            this.botaoSeis.Click += new System.EventHandler(this.BtnSeis);
             // 
             // botaoCinco
             // 
@@ -117,7 +117,7 @@
             this.botaoCinco.TabIndex = 5;
             this.botaoCinco.Text = "5";
             this.botaoCinco.UseVisualStyleBackColor = true;
-            this.botaoCinco.Click += new System.EventHandler(this.btnCinco);
+            this.botaoCinco.Click += new System.EventHandler(this.BtnCinco);
             // 
             // botaoSete
             // 
@@ -127,7 +127,7 @@
             this.botaoSete.TabIndex = 5;
             this.botaoSete.Text = "7";
             this.botaoSete.UseVisualStyleBackColor = true;
-            this.botaoSete.Click += new System.EventHandler(this.btnSete);
+            this.botaoSete.Click += new System.EventHandler(this.BtnSete);
             // 
             // botaoQuatro
             // 
@@ -137,7 +137,7 @@
             this.botaoQuatro.TabIndex = 5;
             this.botaoQuatro.Text = "4";
             this.botaoQuatro.UseVisualStyleBackColor = true;
-            this.botaoQuatro.Click += new System.EventHandler(this.btnQuatro);
+            this.botaoQuatro.Click += new System.EventHandler(this.BtnQuatro);
             // 
             // botaoDois
             // 
@@ -147,7 +147,7 @@
             this.botaoDois.TabIndex = 5;
             this.botaoDois.Text = "2";
             this.botaoDois.UseVisualStyleBackColor = true;
-            this.botaoDois.Click += new System.EventHandler(this.btnDois);
+            this.botaoDois.Click += new System.EventHandler(this.BtnDois);
             // 
             // botaoTres
             // 
@@ -157,7 +157,7 @@
             this.botaoTres.TabIndex = 5;
             this.botaoTres.Text = "3";
             this.botaoTres.UseVisualStyleBackColor = true;
-            this.botaoTres.Click += new System.EventHandler(this.btnTres);
+            this.botaoTres.Click += new System.EventHandler(this.BtnTres);
             // 
             // botaoUm
             // 
@@ -167,7 +167,7 @@
             this.botaoUm.TabIndex = 5;
             this.botaoUm.Text = "1";
             this.botaoUm.UseVisualStyleBackColor = true;
-            this.botaoUm.Click += new System.EventHandler(this.btnUm);
+            this.botaoUm.Click += new System.EventHandler(this.BtnUm);
             // 
             // botaoZero
             // 
@@ -177,7 +177,7 @@
             this.botaoZero.TabIndex = 5;
             this.botaoZero.Text = "0";
             this.botaoZero.UseVisualStyleBackColor = true;
-            this.botaoZero.Click += new System.EventHandler(this.btnZero);
+            this.botaoZero.Click += new System.EventHandler(this.BtnZero);
             // 
             // lblPrimeiroValor
             // 
@@ -205,7 +205,7 @@
             this.botaoSoma.TabIndex = 10;
             this.botaoSoma.Text = "+";
             this.botaoSoma.UseVisualStyleBackColor = true;
-            this.botaoSoma.Click += new System.EventHandler(this.btnSoma);
+            this.botaoSoma.Click += new System.EventHandler(this.BtnOperacao);
             // 
             // botaoSubtracao
             // 
@@ -215,7 +215,7 @@
             this.botaoSubtracao.TabIndex = 11;
             this.botaoSubtracao.Text = "-";
             this.botaoSubtracao.UseVisualStyleBackColor = true;
-            this.botaoSubtracao.Click += new System.EventHandler(this.btnSubtracao);
+            this.botaoSubtracao.Click += new System.EventHandler(this.BtnOperacao);
             // 
             // botaoMultiplicacao
             // 
@@ -225,7 +225,7 @@
             this.botaoMultiplicacao.TabIndex = 12;
             this.botaoMultiplicacao.Text = "*";
             this.botaoMultiplicacao.UseVisualStyleBackColor = true;
-            this.botaoMultiplicacao.Click += new System.EventHandler(this.btnMultiplicacao);
+            this.botaoMultiplicacao.Click += new System.EventHandler(this.BtnOperacao);
             // 
             // botaoDivisao
             // 
@@ -235,7 +235,7 @@
             this.botaoDivisao.TabIndex = 13;
             this.botaoDivisao.Text = "/";
             this.botaoDivisao.UseVisualStyleBackColor = true;
-            this.botaoDivisao.Click += new System.EventHandler(this.btnDivisao);
+            this.botaoDivisao.Click += new System.EventHandler(this.BtnOperacao);
             // 
             // lblSinal
             // 
@@ -253,7 +253,7 @@
             this.botaoInversaoSinal.TabIndex = 16;
             this.botaoInversaoSinal.Text = "+/-";
             this.botaoInversaoSinal.UseVisualStyleBackColor = true;
-            this.botaoInversaoSinal.Click += new System.EventHandler(this.btnInverteSinal);
+            this.botaoInversaoSinal.Click += new System.EventHandler(this.BtnInverteSinal);
             // 
             // botaoClear
             // 
@@ -263,7 +263,7 @@
             this.botaoClear.TabIndex = 18;
             this.botaoClear.Text = "C";
             this.botaoClear.UseVisualStyleBackColor = true;
-            this.botaoClear.Click += new System.EventHandler(this.btnClear);
+            this.botaoClear.Click += new System.EventHandler(this.BtnClear);
             // 
             // Form1
             // 
