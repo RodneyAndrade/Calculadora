@@ -28,3 +28,16 @@ C:\source\repos\Calculadora\calculadora forms\obj\Debug\netcoreapp3.1\calculador
 C:\source\repos\Calculadora\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.dll
 C:\source\repos\Calculadora\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.pdb
 C:\source\repos\Calculadora\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.genruntimeconfig.cache
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.exe
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.deps.json
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.runtimeconfig.json
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.runtimeconfig.dev.json
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.dll
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\bin\Debug\netcoreapp3.1\calculadora forms.pdb
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.csprojAssemblyReference.cache
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\obj\Debug\netcoreapp3.1\calculadora_forms.Form1.resources
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.csproj.GenerateResource.cache
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.AssemblyInfoInputs.cache
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.AssemblyInfo.cs
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.dll
+E:\Meus documentos\Projetos\Calculadora-1\calculadora forms\obj\Debug\netcoreapp3.1\calculadora forms.pdb
