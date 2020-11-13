@@ -28,39 +28,211 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.botaoIgual = new System.Windows.Forms.Button();
+            this.btnZero = new System.Windows.Forms.Button();
+            this.btnUm = new System.Windows.Forms.Button();
+            this.btnDois = new System.Windows.Forms.Button();
+            this.btnTres = new System.Windows.Forms.Button();
+            this.btnQuatro = new System.Windows.Forms.Button();
+            this.btnCinco = new System.Windows.Forms.Button();
+            this.btnSeis = new System.Windows.Forms.Button();
+            this.btnSete = new System.Windows.Forms.Button();
+            this.btnOito = new System.Windows.Forms.Button();
+            this.btnNove = new System.Windows.Forms.Button();
+
+            this.btnSoma = new System.Windows.Forms.Button();
+            this.btnSubtracao = new System.Windows.Forms.Button();
+            this.btnMultiplicacao = new System.Windows.Forms.Button();
+            this.btnDivisao = new System.Windows.Forms.Button();
+
+            this.btnIgual = new System.Windows.Forms.Button();
+
+            this.btnInversaoSinal = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+
             this.Pnumero = new System.Windows.Forms.TextBox();
             this.lblResultado = new System.Windows.Forms.Label();
-            this.botaoNove = new System.Windows.Forms.Button();
-            this.botaoOito = new System.Windows.Forms.Button();
-            this.botaoSeis = new System.Windows.Forms.Button();
-            this.botaoCinco = new System.Windows.Forms.Button();
-            this.botaoSete = new System.Windows.Forms.Button();
-            this.botaoQuatro = new System.Windows.Forms.Button();
-            this.botaoDois = new System.Windows.Forms.Button();
-            this.botaoTres = new System.Windows.Forms.Button();
-            this.botaoUm = new System.Windows.Forms.Button();
-            this.botaoZero = new System.Windows.Forms.Button();
             this.lblPrimeiroValor = new System.Windows.Forms.Label();
             this.lblSegundoValor = new System.Windows.Forms.Label();
-            this.botaoSoma = new System.Windows.Forms.Button();
-            this.botaoSubtracao = new System.Windows.Forms.Button();
-            this.botaoMultiplicacao = new System.Windows.Forms.Button();
-            this.botaoDivisao = new System.Windows.Forms.Button();
             this.lblSinal = new System.Windows.Forms.Label();
-            this.botaoInversaoSinal = new System.Windows.Forms.Button();
-            this.botaoClear = new System.Windows.Forms.Button();
+
             this.SuspendLayout();
+
+            // 
+            // btnZero
+            // 
+            this.btnZero.Location = new System.Drawing.Point(93, 397);
+            this.btnZero.Name = "zero";
+            this.btnZero.Size = new System.Drawing.Size(75, 60);
+            this.btnZero.TabIndex = 5;
+            this.btnZero.Text = "0";
+            this.btnZero.UseVisualStyleBackColor = true;
+            this.btnZero.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnUm
+            // 
+            this.btnUm.Location = new System.Drawing.Point(12, 331);
+            this.btnUm.Name = "um";
+            this.btnUm.Size = new System.Drawing.Size(75, 60);
+            this.btnUm.TabIndex = 5;
+            this.btnUm.Text = "1";
+            this.btnUm.UseVisualStyleBackColor = true;
+            this.btnUm.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnDois
+            // 
+            this.btnDois.Location = new System.Drawing.Point(93, 331);
+            this.btnDois.Name = "dois";
+            this.btnDois.Size = new System.Drawing.Size(75, 60);
+            this.btnDois.TabIndex = 5;
+            this.btnDois.Text = "2";
+            this.btnDois.UseVisualStyleBackColor = true;
+            this.btnDois.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnTres
+            // 
+            this.btnTres.Location = new System.Drawing.Point(174, 331);
+            this.btnTres.Name = "tres";
+            this.btnTres.Size = new System.Drawing.Size(75, 60);
+            this.btnTres.TabIndex = 5;
+            this.btnTres.Text = "3";
+            this.btnTres.UseVisualStyleBackColor = true;
+            this.btnTres.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnQuatro
+            // 
+            this.btnQuatro.Location = new System.Drawing.Point(12, 265);
+            this.btnQuatro.Name = "quatro";
+            this.btnQuatro.Size = new System.Drawing.Size(75, 60);
+            this.btnQuatro.TabIndex = 5;
+            this.btnQuatro.Text = "4";
+            this.btnQuatro.UseVisualStyleBackColor = true;
+            this.btnQuatro.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnCinco
+            // 
+            this.btnCinco.Location = new System.Drawing.Point(93, 265);
+            this.btnCinco.Name = "cinco";
+            this.btnCinco.Size = new System.Drawing.Size(75, 60);
+            this.btnCinco.TabIndex = 5;
+            this.btnCinco.Text = "5";
+            this.btnCinco.UseVisualStyleBackColor = true;
+            this.btnCinco.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnSeis
+            // 
+            this.btnSeis.Location = new System.Drawing.Point(174, 265);
+            this.btnSeis.Name = "seis";
+            this.btnSeis.Size = new System.Drawing.Size(75, 60);
+            this.btnSeis.TabIndex = 7;
+            this.btnSeis.Text = "6";
+            this.btnSeis.UseVisualStyleBackColor = true;
+            this.btnSeis.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnSete
+            // 
+            this.btnSete.Location = new System.Drawing.Point(12, 199);
+            this.btnSete.Name = "sete";
+            this.btnSete.Size = new System.Drawing.Size(75, 60);
+            this.btnSete.TabIndex = 5;
+            this.btnSete.Text = "7";
+            this.btnSete.UseVisualStyleBackColor = true;
+            this.btnSete.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnOito
+            // 
+            this.btnOito.Location = new System.Drawing.Point(93, 199);
+            this.btnOito.Name = "oito";
+            this.btnOito.Size = new System.Drawing.Size(75, 60);
+            this.btnOito.TabIndex = 6;
+            this.btnOito.Text = "8";
+            this.btnOito.UseVisualStyleBackColor = true;
+            this.btnOito.Click += new System.EventHandler(this.AtribuirValor);
+            // 
+            // btnNove
+            // 
+            this.btnNove.Location = new System.Drawing.Point(174, 199);
+            this.btnNove.Name = "nove";
+            this.btnNove.Size = new System.Drawing.Size(75, 60);
+            this.btnNove.TabIndex = 5;
+            this.btnNove.Text = "9";
+            this.btnNove.UseVisualStyleBackColor = true;
+            this.btnNove.Click += new System.EventHandler(this.AtribuirValor);
+
+
+            // 
+            // btnSoma
+            // 
+            this.btnSoma.Location = new System.Drawing.Point(255, 199);
+            this.btnSoma.Name = "soma";
+            this.btnSoma.Size = new System.Drawing.Size(75, 60);
+            this.btnSoma.TabIndex = 10;
+            this.btnSoma.Text = "+";
+            this.btnSoma.UseVisualStyleBackColor = true;
+            this.btnSoma.Click += new System.EventHandler(this.AtribuirOperacao);
+            // 
+            // btnSubtracao
+            // 
+            this.btnSubtracao.Location = new System.Drawing.Point(255, 265);
+            this.btnSubtracao.Name = "subtracao";
+            this.btnSubtracao.Size = new System.Drawing.Size(75, 60);
+            this.btnSubtracao.TabIndex = 11;
+            this.btnSubtracao.Text = "-";
+            this.btnSubtracao.UseVisualStyleBackColor = true;
+            this.btnSubtracao.Click += new System.EventHandler(this.AtribuirOperacao);
+            // 
+            // btnMultiplicacao
+            // 
+            this.btnMultiplicacao.Location = new System.Drawing.Point(255, 332);
+            this.btnMultiplicacao.Name = "multiplicacao";
+            this.btnMultiplicacao.Size = new System.Drawing.Size(75, 59);
+            this.btnMultiplicacao.TabIndex = 12;
+            this.btnMultiplicacao.Text = "*";
+            this.btnMultiplicacao.UseVisualStyleBackColor = true;
+            this.btnMultiplicacao.Click += new System.EventHandler(this.AtribuirOperacao);
+            // 
+            // btnDivisao
+            // 
+            this.btnDivisao.Location = new System.Drawing.Point(255, 397);
+            this.btnDivisao.Name = "divisao";
+            this.btnDivisao.Size = new System.Drawing.Size(75, 60);
+            this.btnDivisao.TabIndex = 13;
+            this.btnDivisao.Text = "/";
+            this.btnDivisao.UseVisualStyleBackColor = true;
+            this.btnDivisao.Click += new System.EventHandler(this.AtribuirOperacao);
+
+
             // 
             // botaoIgual
             // 
-            this.botaoIgual.Location = new System.Drawing.Point(255, 133);
-            this.botaoIgual.Name = "igual";
-            this.botaoIgual.Size = new System.Drawing.Size(75, 60);
-            this.botaoIgual.TabIndex = 0;
-            this.botaoIgual.Text = "=";
-            this.botaoIgual.UseVisualStyleBackColor = true;
-            this.botaoIgual.Click += new System.EventHandler(this.BtnIgual);
+            this.btnIgual.Location = new System.Drawing.Point(255, 133);
+            this.btnIgual.Name = "igual";
+            this.btnIgual.Size = new System.Drawing.Size(75, 60);
+            this.btnIgual.TabIndex = 0;
+            this.btnIgual.Text = "=";
+            this.btnIgual.UseVisualStyleBackColor = true;
+            this.btnIgual.Click += new System.EventHandler(this.BtnIgual);
+
+            // 
+            // btnInversaoSinal
+            // 
+            this.btnInversaoSinal.Location = new System.Drawing.Point(13, 398);
+            this.btnInversaoSinal.Name = "inversao de sinal";
+            this.btnInversaoSinal.Size = new System.Drawing.Size(75, 59);
+            this.btnInversaoSinal.TabIndex = 16;
+            this.btnInversaoSinal.Text = "+/-";
+            this.btnInversaoSinal.UseVisualStyleBackColor = true;
+            this.btnInversaoSinal.Click += new System.EventHandler(this.BtnInverteSinal);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(174, 397);
+            this.btnLimpar.Name = "clear";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 60);
+            this.btnLimpar.TabIndex = 18;
+            this.btnLimpar.Text = "C";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar);
+
             // 
             // Pnumero
             // 
@@ -78,106 +250,6 @@
             this.lblResultado.Size = new System.Drawing.Size(13, 15);
             this.lblResultado.TabIndex = 4;
             this.lblResultado.Text = string.Empty;
-            // 
-            // botaoNove
-            // 
-            this.botaoNove.Location = new System.Drawing.Point(174, 199);
-            this.botaoNove.Name = "nove";
-            this.botaoNove.Size = new System.Drawing.Size(75, 60);
-            this.botaoNove.TabIndex = 5;
-            this.botaoNove.Text = "9";
-            this.botaoNove.UseVisualStyleBackColor = true;
-            this.botaoNove.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoOito
-            // 
-            this.botaoOito.Location = new System.Drawing.Point(93, 199);
-            this.botaoOito.Name = "oito";
-            this.botaoOito.Size = new System.Drawing.Size(75, 60);
-            this.botaoOito.TabIndex = 6;
-            this.botaoOito.Text = "8";
-            this.botaoOito.UseVisualStyleBackColor = true;
-            this.botaoOito.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoSeis
-            // 
-            this.botaoSeis.Location = new System.Drawing.Point(174, 265);
-            this.botaoSeis.Name = "seis";
-            this.botaoSeis.Size = new System.Drawing.Size(75, 60);
-            this.botaoSeis.TabIndex = 7;
-            this.botaoSeis.Text = "6";
-            this.botaoSeis.UseVisualStyleBackColor = true;
-            this.botaoSeis.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoCinco
-            // 
-            this.botaoCinco.Location = new System.Drawing.Point(93, 265);
-            this.botaoCinco.Name = "cinco";
-            this.botaoCinco.Size = new System.Drawing.Size(75, 60);
-            this.botaoCinco.TabIndex = 5;
-            this.botaoCinco.Text = "5";
-            this.botaoCinco.UseVisualStyleBackColor = true;
-            this.botaoCinco.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoSete
-            // 
-            this.botaoSete.Location = new System.Drawing.Point(12, 199);
-            this.botaoSete.Name = "sete";
-            this.botaoSete.Size = new System.Drawing.Size(75, 60);
-            this.botaoSete.TabIndex = 5;
-            this.botaoSete.Text = "7";
-            this.botaoSete.UseVisualStyleBackColor = true;
-            this.botaoSete.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoQuatro
-            // 
-            this.botaoQuatro.Location = new System.Drawing.Point(12, 265);
-            this.botaoQuatro.Name = "quatro";
-            this.botaoQuatro.Size = new System.Drawing.Size(75, 60);
-            this.botaoQuatro.TabIndex = 5;
-            this.botaoQuatro.Text = "4";
-            this.botaoQuatro.UseVisualStyleBackColor = true;
-            this.botaoQuatro.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoDois
-            // 
-            this.botaoDois.Location = new System.Drawing.Point(93, 331);
-            this.botaoDois.Name = "dois";
-            this.botaoDois.Size = new System.Drawing.Size(75, 60);
-            this.botaoDois.TabIndex = 5;
-            this.botaoDois.Text = "2";
-            this.botaoDois.UseVisualStyleBackColor = true;
-            this.botaoDois.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoTres
-            // 
-            this.botaoTres.Location = new System.Drawing.Point(174, 331);
-            this.botaoTres.Name = "tres";
-            this.botaoTres.Size = new System.Drawing.Size(75, 60);
-            this.botaoTres.TabIndex = 5;
-            this.botaoTres.Text = "3";
-            this.botaoTres.UseVisualStyleBackColor = true;
-            this.botaoTres.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoUm
-            // 
-            this.botaoUm.Location = new System.Drawing.Point(12, 331);
-            this.botaoUm.Name = "um";
-            this.botaoUm.Size = new System.Drawing.Size(75, 60);
-            this.botaoUm.TabIndex = 5;
-            this.botaoUm.Text = "1";
-            this.botaoUm.UseVisualStyleBackColor = true;
-            this.botaoUm.Click += new System.EventHandler(this.AtribuirValor);
-            // 
-            // botaoZero
-            // 
-            this.botaoZero.Location = new System.Drawing.Point(93, 397);
-            this.botaoZero.Name = "zero";
-            this.botaoZero.Size = new System.Drawing.Size(75, 60);
-            this.botaoZero.TabIndex = 5;
-            this.botaoZero.Text = "0";
-            this.botaoZero.UseVisualStyleBackColor = true;
-            this.botaoZero.Click += new System.EventHandler(this.AtribuirValor);
             // 
             // lblPrimeiroValor
             // 
@@ -197,46 +269,6 @@
             this.lblSegundoValor.TabIndex = 9;
             this.lblSegundoValor.Text = string.Empty;
             // 
-            // botaoSoma
-            // 
-            this.botaoSoma.Location = new System.Drawing.Point(255, 199);
-            this.botaoSoma.Name = "soma";
-            this.botaoSoma.Size = new System.Drawing.Size(75, 60);
-            this.botaoSoma.TabIndex = 10;
-            this.botaoSoma.Text = "+";
-            this.botaoSoma.UseVisualStyleBackColor = true;
-            this.botaoSoma.Click += new System.EventHandler(this.BtnOperacao);
-            // 
-            // botaoSubtracao
-            // 
-            this.botaoSubtracao.Location = new System.Drawing.Point(255, 265);
-            this.botaoSubtracao.Name = "subtracao";
-            this.botaoSubtracao.Size = new System.Drawing.Size(75, 60);
-            this.botaoSubtracao.TabIndex = 11;
-            this.botaoSubtracao.Text = "-";
-            this.botaoSubtracao.UseVisualStyleBackColor = true;
-            this.botaoSubtracao.Click += new System.EventHandler(this.BtnOperacao);
-            // 
-            // botaoMultiplicacao
-            // 
-            this.botaoMultiplicacao.Location = new System.Drawing.Point(255, 332);
-            this.botaoMultiplicacao.Name = "multiplicacao";
-            this.botaoMultiplicacao.Size = new System.Drawing.Size(75, 59);
-            this.botaoMultiplicacao.TabIndex = 12;
-            this.botaoMultiplicacao.Text = "*";
-            this.botaoMultiplicacao.UseVisualStyleBackColor = true;
-            this.botaoMultiplicacao.Click += new System.EventHandler(this.BtnOperacao);
-            // 
-            // botaoDivisao
-            // 
-            this.botaoDivisao.Location = new System.Drawing.Point(255, 397);
-            this.botaoDivisao.Name = "divisao";
-            this.botaoDivisao.Size = new System.Drawing.Size(75, 60);
-            this.botaoDivisao.TabIndex = 13;
-            this.botaoDivisao.Text = "/";
-            this.botaoDivisao.UseVisualStyleBackColor = true;
-            this.botaoDivisao.Click += new System.EventHandler(this.BtnOperacao);
-            // 
             // lblSinal
             // 
             this.lblSinal.AutoSize = true;
@@ -245,53 +277,33 @@
             this.lblSinal.Size = new System.Drawing.Size(0, 15);
             this.lblSinal.TabIndex = 15;
             // 
-            // botaoInversaoSinal
-            // 
-            this.botaoInversaoSinal.Location = new System.Drawing.Point(13, 398);
-            this.botaoInversaoSinal.Name = "inversao de sinal";
-            this.botaoInversaoSinal.Size = new System.Drawing.Size(75, 59);
-            this.botaoInversaoSinal.TabIndex = 16;
-            this.botaoInversaoSinal.Text = "+/-";
-            this.botaoInversaoSinal.UseVisualStyleBackColor = true;
-            this.botaoInversaoSinal.Click += new System.EventHandler(this.BtnInverteSinal);
-            // 
-            // botaoClear
-            // 
-            this.botaoClear.Location = new System.Drawing.Point(174, 397);
-            this.botaoClear.Name = "clear";
-            this.botaoClear.Size = new System.Drawing.Size(75, 60);
-            this.botaoClear.TabIndex = 18;
-            this.botaoClear.Text = "C";
-            this.botaoClear.UseVisualStyleBackColor = true;
-            this.botaoClear.Click += new System.EventHandler(this.BtnLimpar);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 469);
-            this.Controls.Add(this.botaoClear);
-            this.Controls.Add(this.botaoInversaoSinal);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnInversaoSinal);
             this.Controls.Add(this.lblSinal);
-            this.Controls.Add(this.botaoDivisao);
-            this.Controls.Add(this.botaoMultiplicacao);
-            this.Controls.Add(this.botaoSubtracao);
-            this.Controls.Add(this.botaoSoma);
+            this.Controls.Add(this.btnDivisao);
+            this.Controls.Add(this.btnMultiplicacao);
+            this.Controls.Add(this.btnSubtracao);
+            this.Controls.Add(this.btnSoma);
             this.Controls.Add(this.lblSegundoValor);
             this.Controls.Add(this.lblPrimeiroValor);
-            this.Controls.Add(this.botaoZero);
-            this.Controls.Add(this.botaoUm);
-            this.Controls.Add(this.botaoTres);
-            this.Controls.Add(this.botaoDois);
-            this.Controls.Add(this.botaoQuatro);
-            this.Controls.Add(this.botaoSete);
-            this.Controls.Add(this.botaoCinco);
-            this.Controls.Add(this.botaoSeis);
-            this.Controls.Add(this.botaoOito);
-            this.Controls.Add(this.botaoNove);
+            this.Controls.Add(this.btnZero);
+            this.Controls.Add(this.btnUm);
+            this.Controls.Add(this.btnTres);
+            this.Controls.Add(this.btnDois);
+            this.Controls.Add(this.btnQuatro);
+            this.Controls.Add(this.btnSete);
+            this.Controls.Add(this.btnCinco);
+            this.Controls.Add(this.btnSeis);
+            this.Controls.Add(this.btnOito);
+            this.Controls.Add(this.btnNove);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.Pnumero);
-            this.Controls.Add(this.botaoIgual);
+            this.Controls.Add(this.btnIgual);
             this.Name = "Form1";
             this.Text = "Calculadora Rampister";
             this.ResumeLayout(false);
@@ -301,23 +313,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Button botaoZero;
-        private System.Windows.Forms.Button botaoUm;
-        private System.Windows.Forms.Button botaoDois;
-        private System.Windows.Forms.Button botaoTres;
-        private System.Windows.Forms.Button botaoQuatro;
-        private System.Windows.Forms.Button botaoCinco;
-        private System.Windows.Forms.Button botaoSeis;
-        private System.Windows.Forms.Button botaoSete;
-        private System.Windows.Forms.Button botaoOito;
-        private System.Windows.Forms.Button botaoNove;
-        private System.Windows.Forms.Button botaoSoma;
-        private System.Windows.Forms.Button botaoSubtracao;
-        private System.Windows.Forms.Button botaoMultiplicacao;
-        private System.Windows.Forms.Button botaoDivisao;
-        private System.Windows.Forms.Button botaoIgual;
-        private System.Windows.Forms.Button botaoInversaoSinal;
-        private System.Windows.Forms.Button botaoClear;
+        private System.Windows.Forms.Button btnZero;
+        private System.Windows.Forms.Button btnUm;
+        private System.Windows.Forms.Button btnDois;
+        private System.Windows.Forms.Button btnTres;
+        private System.Windows.Forms.Button btnQuatro;
+        private System.Windows.Forms.Button btnCinco;
+        private System.Windows.Forms.Button btnSeis;
+        private System.Windows.Forms.Button btnSete;
+        private System.Windows.Forms.Button btnOito;
+        private System.Windows.Forms.Button btnNove;
+        private System.Windows.Forms.Button btnSoma;
+        private System.Windows.Forms.Button btnSubtracao;
+        private System.Windows.Forms.Button btnMultiplicacao;
+        private System.Windows.Forms.Button btnDivisao;
+        private System.Windows.Forms.Button btnIgual;
+        private System.Windows.Forms.Button btnInversaoSinal;
+        private System.Windows.Forms.Button btnLimpar;
 
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Label lblPrimeiroValor;

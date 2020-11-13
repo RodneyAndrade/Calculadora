@@ -34,7 +34,7 @@ namespace calculadora_forms
             }
         }
 
-        private void BtnOperacao(object sender, EventArgs e)
+        private void AtribuirOperacao(object sender, EventArgs e)
         {
             operador = ((Button)sender).Text;
             lblSinal.Text = operador;
