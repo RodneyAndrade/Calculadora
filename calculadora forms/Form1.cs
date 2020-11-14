@@ -50,8 +50,9 @@ namespace calculadora_forms
                 case ("/"):
                     if (segundoValor == 0)
                     {
+                        lblPrimeiraLinha.Text = primeiroValor.ToString() + " " + operador + " " + segundoValor.ToString() + " = ";
                         lblSegundaLinha.Text = "Não é possível dividir por zero";
-                        break;
+                        return;
                     }
                     resultadoMatematico = primeiroValor / segundoValor;
                     break;
