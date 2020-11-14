@@ -34,8 +34,19 @@ namespace calculadora_forms
 
         private void AtribuirOperacao(object sender, EventArgs e)
         {
-            operador = ((Button)sender).Text;
-            lblPrimeiraLinha.Text = lblSegundaLinha.Text + " " + operador + " ";
+            var operacao = ((Button)sender).Text;
+
+            if (string.IsNullOrEmpty(operador))
+            {
+                operador = operacao;
+                lblPrimeiraLinha.Text = lblSegundaLinha.Text + " " + operador + " ";
+            }
+            else
+            {
+                lblPrimeiraLinha.Text = lblPrimeiraLinha.Text.Replace(operador, operacao);
+                operador = operacao;
+            }
+
             lblSegundaLinha.Text = string.Empty;
         }
 
@@ -68,7 +79,7 @@ namespace calculadora_forms
 
             primeiroValor = resultadoMatematico;
 
-            lblPrimeiraLinha.Text = primeiroValor.ToString() + " " + operador + " " + segundoValor.ToString() +  " = ";
+            lblPrimeiraLinha.Text = primeiroValor.ToString() + " " + operador + " " + segundoValor.ToString() + " = ";
 
             lblSegundaLinha.Text = resultadoMatematico.ToString();
         }
