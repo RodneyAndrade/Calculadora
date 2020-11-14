@@ -89,7 +89,7 @@ namespace calculadora_forms
 
             if (string.IsNullOrEmpty(lblSegundaLinha.Text))
             {
-                lblSegundaLinha.Text = "-";
+                lblSegundaLinha.Text = negativo;
                 return;
             }
 
