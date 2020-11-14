@@ -49,11 +49,8 @@
             this.btnInversaoSinal = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
 
-            this.Pnumero = new System.Windows.Forms.TextBox();
-            this.lblResultado = new System.Windows.Forms.Label();
-            this.lblPrimeiroValor = new System.Windows.Forms.Label();
-            this.lblSegundoValor = new System.Windows.Forms.Label();
-            this.lblSinal = new System.Windows.Forms.Label();
+            this.lblPrimeiraLinha = new System.Windows.Forms.Label();
+            this.lblSegundaLinha = new System.Windows.Forms.Label();
 
             this.SuspendLayout();
 
@@ -234,48 +231,25 @@
             this.btnLimpar.Click += new System.EventHandler(this.BtnLimpar);
 
             // 
-            // Pnumero
+            // lblPrimeiraLinha
             // 
-            this.Pnumero.Font = new System.Drawing.Font("Niagara Solid", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Pnumero.Location = new System.Drawing.Point(12, 42);
-            this.Pnumero.Name = "Pnumero";
-            this.Pnumero.Size = new System.Drawing.Size(318, 59);
-            this.Pnumero.TabIndex = 1;
+            this.lblPrimeiraLinha.AutoSize = true;
+            this.lblPrimeiraLinha.Location = new System.Drawing.Point(12, 13);
+            this.lblPrimeiraLinha.Name = "primeiro valor";
+            this.lblPrimeiraLinha.Size = new System.Drawing.Size(13, 15);
+            this.lblPrimeiraLinha.TabIndex = 8;
+            this.lblPrimeiraLinha.Text = string.Empty;
+
             // 
-            // lblResultado
+            // lblSegundaLinha
             // 
-            this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(144, 13);
-            this.lblResultado.Name = "label1";
-            this.lblResultado.Size = new System.Drawing.Size(13, 15);
-            this.lblResultado.TabIndex = 4;
-            this.lblResultado.Text = string.Empty;
-            // 
-            // lblPrimeiroValor
-            // 
-            this.lblPrimeiroValor.AutoSize = true;
-            this.lblPrimeiroValor.Location = new System.Drawing.Point(12, 13);
-            this.lblPrimeiroValor.Name = "primeiro valor";
-            this.lblPrimeiroValor.Size = new System.Drawing.Size(13, 15);
-            this.lblPrimeiroValor.TabIndex = 8;
-            this.lblPrimeiroValor.Text = string.Empty;
-            // 
-            // lblSegundoValor
-            // 
-            this.lblSegundoValor.AutoSize = true;
-            this.lblSegundoValor.Location = new System.Drawing.Point(100, 13);
-            this.lblSegundoValor.Name = "segundo valor";
-            this.lblSegundoValor.Size = new System.Drawing.Size(13, 15);
-            this.lblSegundoValor.TabIndex = 9;
-            this.lblSegundoValor.Text = string.Empty;
-            // 
-            // lblSinal
-            // 
-            this.lblSinal.AutoSize = true;
-            this.lblSinal.Location = new System.Drawing.Point(56, 13);
-            this.lblSinal.Name = "label5";
-            this.lblSinal.Size = new System.Drawing.Size(0, 15);
-            this.lblSinal.TabIndex = 15;
+            this.lblSegundaLinha.Font = new System.Drawing.Font("Niagara Solid", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblSegundaLinha.Location = new System.Drawing.Point(12, 42);
+            this.lblSegundaLinha.Name = "Pnumero";
+            this.lblSegundaLinha.Size = new System.Drawing.Size(318, 59);
+            this.lblSegundaLinha.TabIndex = 1;
+            
+
             // 
             // Form1
             // 
@@ -284,13 +258,12 @@
             this.ClientSize = new System.Drawing.Size(339, 469);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnInversaoSinal);
-            this.Controls.Add(this.lblSinal);
             this.Controls.Add(this.btnDivisao);
             this.Controls.Add(this.btnMultiplicacao);
             this.Controls.Add(this.btnSubtracao);
             this.Controls.Add(this.btnSoma);
-            this.Controls.Add(this.lblSegundoValor);
-            this.Controls.Add(this.lblPrimeiroValor);
+            this.Controls.Add(this.lblSegundaLinha);
+            this.Controls.Add(this.lblPrimeiraLinha);
             this.Controls.Add(this.btnZero);
             this.Controls.Add(this.btnUm);
             this.Controls.Add(this.btnTres);
@@ -301,8 +274,6 @@
             this.Controls.Add(this.btnSeis);
             this.Controls.Add(this.btnOito);
             this.Controls.Add(this.btnNove);
-            this.Controls.Add(this.lblResultado);
-            this.Controls.Add(this.Pnumero);
             this.Controls.Add(this.btnIgual);
             this.Name = "Form1";
             this.Text = "Calculadora Rampister";
@@ -331,12 +302,12 @@
         private System.Windows.Forms.Button btnInversaoSinal;
         private System.Windows.Forms.Button btnLimpar;
 
-        private System.Windows.Forms.Label lblResultado;
-        private System.Windows.Forms.Label lblPrimeiroValor;
-        private System.Windows.Forms.Label lblSegundoValor;
-        private System.Windows.Forms.Label lblSinal;
+        //private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.Label lblPrimeiraLinha;
+        private System.Windows.Forms.Label lblSegundaLinha;
+        //private System.Windows.Forms.Label lblSinal;
 
-        private System.Windows.Forms.TextBox Pnumero;
+        //private System.Windows.Forms.TextBox Pnumero;
     }
 }
 

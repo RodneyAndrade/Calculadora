@@ -9,8 +9,6 @@ namespace calculadora_forms
         private decimal primeiroValor;
         private decimal segundoValor;
         private string operador;
-        private string s1;
-        private string s2;
         private int passos = 1;
 
         public Form1()
@@ -24,20 +22,21 @@ namespace calculadora_forms
 
             if (string.IsNullOrEmpty(operador))
             {
-                lblPrimeiroValor.Text += valor;
-                primeiroValor = Convert.ToDecimal(lblPrimeiroValor.Text);
+                lblSegundaLinha.Text += valor;
+                primeiroValor = Convert.ToDecimal(lblSegundaLinha.Text);
             }
             else
             {
-                lblSegundoValor.Text += valor;
-                segundoValor = Convert.ToDecimal(lblSegundoValor.Text);
+                lblSegundaLinha.Text += valor;
+                segundoValor = Convert.ToDecimal(lblSegundaLinha.Text);
             }
         }
 
         private void AtribuirOperacao(object sender, EventArgs e)
         {
             operador = ((Button)sender).Text;
-            lblSinal.Text = operador;
+            lblPrimeiraLinha.Text = lblSegundaLinha.Text + " " + operador + " ";
+            lblSegundaLinha.Text = string.Empty;
         }
 
         private void BtnIgual(object sender, EventArgs e)
@@ -51,7 +50,7 @@ namespace calculadora_forms
                 case ("/"):
                     if (segundoValor == 0)
                     {
-                        lblResultado.Text = "Não é possível dividir por zero";
+                        lblSegundaLinha.Text = "Não é possível dividir por zero";
                         break;
                     }
                     resultadoMatematico = primeiroValor / segundoValor;
@@ -66,11 +65,11 @@ namespace calculadora_forms
                     break;
             }
 
-            lblResultado.Text = " = " + resultadoMatematico.ToString();
+            primeiroValor = resultadoMatematico;
 
-            operador = string.Empty;
+            lblPrimeiraLinha.Text = primeiroValor.ToString() + " " + operador + " " + segundoValor.ToString() +  " = ";
 
-            Pnumero.Text = string.Empty;
+            lblSegundaLinha.Text = resultadoMatematico.ToString();
         }
 
         private void BtnInverteSinal(object sender, EventArgs e)
@@ -78,18 +77,10 @@ namespace calculadora_forms
             if (passos == 1)
             {
                 primeiroValor *= -1;
-                s1 = Convert.ToString(primeiroValor);
-                lblPrimeiroValor.Text = s1;
-                Pnumero.Text = s1;
             }
             if (passos == 2)
             {
-                Pnumero.Text = "";
                 segundoValor *= -1;
-                s2 = Convert.ToString(segundoValor);
-                lblSegundoValor.Text = s2;
-
-                Pnumero.Text = s2;
             }
         }
 
@@ -97,11 +88,8 @@ namespace calculadora_forms
         {
             primeiroValor = 0;
             segundoValor = 0;
-            Pnumero.Text = string.Empty;
-            lblResultado.Text = string.Empty;
-            lblPrimeiroValor.Text = string.Empty;
-            lblSegundoValor.Text = string.Empty;
-            lblSinal.Text = string.Empty;
+            lblPrimeiraLinha.Text = string.Empty;
+            lblSegundaLinha.Text = string.Empty;
         }
     }
 }
