@@ -101,7 +101,7 @@ namespace calculadora_forms
             }
             else
             {
-                lblSegundaLinha.Text = "-" + lblSegundaLinha.Text;
+                lblSegundaLinha.Text = negativo + lblSegundaLinha.Text;
             }
 
             if (string.IsNullOrEmpty(operador))
