@@ -9,7 +9,6 @@ namespace calculadora_forms
         private decimal primeiroValor;
         private decimal segundoValor;
         private string operador;
-        private int passos = 1;
 
         public Form1()
         {
@@ -77,22 +76,41 @@ namespace calculadora_forms
                     break;
             }
 
-            primeiroValor = resultadoMatematico;
-
             lblPrimeiraLinha.Text = primeiroValor.ToString() + " " + operador + " " + segundoValor.ToString() + " = ";
+
+            primeiroValor = resultadoMatematico;
 
             lblSegundaLinha.Text = resultadoMatematico.ToString();
         }
 
         private void BtnInverteSinal(object sender, EventArgs e)
         {
-            if (passos == 1)
+            const string negativo = "-";
+
+            if (string.IsNullOrEmpty(lblSegundaLinha.Text))
             {
-                primeiroValor *= -1;
+                lblSegundaLinha.Text = "-";
+                return;
             }
-            if (passos == 2)
+
+            var primeiroCaracter = lblSegundaLinha.Text.Substring(0, 1);
+
+            if (primeiroCaracter.Equals(negativo))
             {
-                segundoValor *= -1;
+                lblSegundaLinha.Text = lblSegundaLinha.Text.Replace(negativo, string.Empty);
+            }
+            else
+            {
+                lblSegundaLinha.Text = "-" + lblSegundaLinha.Text;
+            }
+
+            if (string.IsNullOrEmpty(operador))
+            {
+                primeiroValor = Convert.ToDecimal(lblSegundaLinha.Text);
+            }
+            else
+            {
+                segundoValor = Convert.ToDecimal(lblSegundaLinha.Text);
             }
         }
 
@@ -100,6 +118,8 @@ namespace calculadora_forms
         {
             primeiroValor = 0;
             segundoValor = 0;
+            resultadoMatematico = 0;
+            operador = string.Empty;
             lblPrimeiraLinha.Text = string.Empty;
             lblSegundaLinha.Text = string.Empty;
         }
