@@ -17,6 +17,9 @@ namespace calculadora_forms
 
         private void AtribuirValor(object sender, EventArgs e)
         {
+            var raiz = Math.Sqrt(81);
+
+
             var valor = ((Button)sender).Text;
 
             if (string.IsNullOrEmpty(operador))
@@ -122,6 +125,21 @@ namespace calculadora_forms
             operador = string.Empty;
             lblPrimeiraLinha.Text = string.Empty;
             lblSegundaLinha.Text = string.Empty;
+        }
+
+        private void BtnRaizQdrd(object sender, EventArgs e)
+        {
+            if(primeiroValor == 0)
+            {
+
+            }
+            else
+            {
+                double raiz1 = Convert.ToDouble(primeiroValor);
+                double raiz = Math.Sqrt(raiz1);
+                lblSegundaLinha.Text = raiz.ToString();
+                lblPrimeiraLinha.Text = "√" + raiz + "=";
+            }
         }
     }
 }
