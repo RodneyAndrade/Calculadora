@@ -48,6 +48,8 @@
             this.lblPrimeiraLinha = new System.Windows.Forms.Label();
             this.lblSegundaLinha = new System.Windows.Forms.Label();
             this.RaizQuadrada = new System.Windows.Forms.Button();
+            this.btnPonto = new System.Windows.Forms.Button();
+            this.btnPotencia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnZero
@@ -152,6 +154,7 @@
             // 
             // btnSoma
             // 
+            this.btnSoma.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSoma.Location = new System.Drawing.Point(255, 199);
             this.btnSoma.Name = "btnSoma";
             this.btnSoma.Size = new System.Drawing.Size(75, 60);
@@ -162,6 +165,7 @@
             // 
             // btnSubtracao
             // 
+            this.btnSubtracao.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSubtracao.Location = new System.Drawing.Point(255, 265);
             this.btnSubtracao.Name = "btnSubtracao";
             this.btnSubtracao.Size = new System.Drawing.Size(75, 60);
@@ -172,11 +176,12 @@
             // 
             // btnMultiplicacao
             // 
+            this.btnMultiplicacao.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnMultiplicacao.Location = new System.Drawing.Point(255, 332);
             this.btnMultiplicacao.Name = "btnMultiplicacao";
             this.btnMultiplicacao.Size = new System.Drawing.Size(75, 59);
             this.btnMultiplicacao.TabIndex = 12;
-            this.btnMultiplicacao.Text = "*";
+            this.btnMultiplicacao.Text = "x";
             this.btnMultiplicacao.UseVisualStyleBackColor = true;
             this.btnMultiplicacao.Click += new System.EventHandler(this.AtribuirOperacao);
             // 
@@ -186,12 +191,13 @@
             this.btnDivisao.Name = "btnDivisao";
             this.btnDivisao.Size = new System.Drawing.Size(75, 60);
             this.btnDivisao.TabIndex = 13;
-            this.btnDivisao.Text = "/";
+            this.btnDivisao.Text = "÷";
             this.btnDivisao.UseVisualStyleBackColor = true;
             this.btnDivisao.Click += new System.EventHandler(this.AtribuirOperacao);
             // 
             // btnIgual
             // 
+            this.btnIgual.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIgual.Location = new System.Drawing.Point(255, 133);
             this.btnIgual.Name = "btnIgual";
             this.btnIgual.Size = new System.Drawing.Size(75, 60);
@@ -212,7 +218,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(174, 397);
+            this.btnLimpar.Location = new System.Drawing.Point(93, 133);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 60);
             this.btnLimpar.TabIndex = 18;
@@ -246,11 +252,32 @@
             this.RaizQuadrada.UseVisualStyleBackColor = true;
             this.RaizQuadrada.Click += new System.EventHandler(this.BtnRaizQdrd);
             // 
+            // btnPonto
+            // 
+            this.btnPonto.Location = new System.Drawing.Point(175, 398);
+            this.btnPonto.Name = "btnPonto";
+            this.btnPonto.Size = new System.Drawing.Size(75, 59);
+            this.btnPonto.TabIndex = 20;
+            this.btnPonto.Text = "(Em desenvolvimento)";
+            this.btnPonto.UseVisualStyleBackColor = true;
+            // 
+            // btnPotencia
+            // 
+            this.btnPotencia.Location = new System.Drawing.Point(13, 133);
+            this.btnPotencia.Name = "btnPotencia";
+            this.btnPotencia.Size = new System.Drawing.Size(75, 60);
+            this.btnPotencia.TabIndex = 21;
+            this.btnPotencia.Text = "x²";
+            this.btnPotencia.UseVisualStyleBackColor = true;
+            this.btnPotencia.Click += new System.EventHandler(this.BtnPotencia);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 469);
+            this.Controls.Add(this.btnPotencia);
+            this.Controls.Add(this.btnPonto);
             this.Controls.Add(this.RaizQuadrada);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnInversaoSinal);
@@ -302,6 +329,8 @@
         private System.Windows.Forms.Label lblPrimeiraLinha;
         private System.Windows.Forms.Label lblSegundaLinha;
         private System.Windows.Forms.Button RaizQuadrada;
+        private System.Windows.Forms.Button btnPonto;
+        private System.Windows.Forms.Button btnPotencia;
         //private System.Windows.Forms.Label lblSinal;
 
         //private System.Windows.Forms.TextBox Pnumero;

@@ -17,9 +17,6 @@ namespace calculadora_forms
 
         private void AtribuirValor(object sender, EventArgs e)
         {
-            var raiz = Math.Sqrt(81);
-
-
             var valor = ((Button)sender).Text;
 
             if (string.IsNullOrEmpty(operador))
@@ -60,7 +57,7 @@ namespace calculadora_forms
                     resultadoMatematico = primeiroValor + segundoValor;
                     break;
 
-                case ("/"):
+                case ("÷"):
                     if (segundoValor == 0)
                     {
                         lblPrimeiraLinha.Text = primeiroValor.ToString() + " " + operador + " " + segundoValor.ToString() + " = ";
@@ -70,7 +67,7 @@ namespace calculadora_forms
                     resultadoMatematico = primeiroValor / segundoValor;
                     break;
 
-                case ("*"):
+                case ("x"):
                     resultadoMatematico = primeiroValor * segundoValor;
                     break;
 
@@ -131,15 +128,25 @@ namespace calculadora_forms
         {
             if(primeiroValor == 0)
             {
-
+                lblSegundaLinha.Text = "0";
+                lblPrimeiraLinha.Text = "√(0) =";
+                primeiroValor = 0;
             }
             else
             {
                 double raiz1 = Convert.ToDouble(primeiroValor);
                 double raiz = Math.Sqrt(raiz1);
                 lblSegundaLinha.Text = raiz.ToString();
-                lblPrimeiraLinha.Text = "√" + raiz + "=";
+                lblPrimeiraLinha.Text = "√(" + raiz1 + ") =";
+                primeiroValor = Convert.ToDecimal(raiz);
             }
         }
+
+        private void BtnPotencia(object sender, EventArgs e)
+        {
+                resultadoMatematico = primeiroValor * primeiroValor;
+                lblSegundaLinha.Text = resultadoMatematico.ToString();
+                lblPrimeiraLinha.Text = "sqr(" + primeiroValor + ") =";
+        }     
     }
 }
