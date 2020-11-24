@@ -147,6 +147,21 @@ namespace calculadora_forms
                 resultadoMatematico = primeiroValor * primeiroValor;
                 lblSegundaLinha.Text = resultadoMatematico.ToString();
                 lblPrimeiraLinha.Text = "sqr(" + primeiroValor + ") =";
-        }     
+        }
+
+        private void BtnPonto_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void BtnPorcent(object sender, EventArgs e)
+        {
+            if (operador == "x")
+            {
+                segundoValor = Convert.ToDecimal(lblSegundaLinha.Text);
+                segundoValor /= 100;
+                lblPrimeiraLinha.Text = primeiroValor + " x";
+                lblSegundaLinha.Text = segundoValor.ToString();
+            }
+        }
     }
 }
