@@ -51,6 +51,7 @@
             this.btnPonto = new System.Windows.Forms.Button();
             this.btnPotencia = new System.Windows.Forms.Button();
             this.btnPorcentagem = new System.Windows.Forms.Button();
+            this.btnCE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnZero
@@ -283,11 +284,22 @@
             this.btnPorcentagem.UseVisualStyleBackColor = true;
             this.btnPorcentagem.Click += new System.EventHandler(this.BtnPorcent);
             // 
+            // btnCE
+            // 
+            this.btnCE.Location = new System.Drawing.Point(92, 126);
+            this.btnCE.Name = "btnCE";
+            this.btnCE.Size = new System.Drawing.Size(75, 60);
+            this.btnCE.TabIndex = 23;
+            this.btnCE.Text = "CE";
+            this.btnCE.UseVisualStyleBackColor = true;
+            this.btnCE.Click += new System.EventHandler(this.BtnCE);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 527);
+            this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnPorcentagem);
             this.Controls.Add(this.btnPotencia);
             this.Controls.Add(this.btnPonto);
@@ -345,6 +357,7 @@
         private System.Windows.Forms.Button btnPonto;
         private System.Windows.Forms.Button btnPotencia;
         private System.Windows.Forms.Button btnPorcentagem;
+        private System.Windows.Forms.Button btnCE;
         //private System.Windows.Forms.Label lblSinal;
 
         //private System.Windows.Forms.TextBox Pnumero;

@@ -171,5 +171,20 @@ namespace calculadora_forms
                 lblSegundaLinha.Text = segundoValor.ToString();
             }
         }
+
+        private void BtnCE(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(operador))
+            {
+                primeiroValor = 0;
+                lblSegundaLinha.Text = string.Empty;
+            }
+            else
+            {
+                segundoValor = 0;
+                lblSegundaLinha.Text = string.Empty;
+            }
+        }
     }
 }
