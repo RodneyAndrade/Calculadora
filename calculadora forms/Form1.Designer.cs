@@ -259,7 +259,7 @@
             this.btnPonto.Name = "btnPonto";
             this.btnPonto.Size = new System.Drawing.Size(75, 59);
             this.btnPonto.TabIndex = 20;
-            this.btnPonto.Text = "(Em desenvolvimento)";
+            this.btnPonto.Text = ",";
             this.btnPonto.UseVisualStyleBackColor = true;
             this.btnPonto.Click += new System.EventHandler(this.BtnPonto_Click);
             // 

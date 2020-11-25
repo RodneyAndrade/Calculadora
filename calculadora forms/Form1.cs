@@ -152,6 +152,14 @@ namespace calculadora_forms
         private void BtnPonto_Click(object sender, EventArgs e)
         {
 
+            if (string.IsNullOrEmpty(operador))
+            {
+                lblSegundaLinha.Text = primeiroValor + ","; 
+            }
+            else
+            {
+                lblSegundaLinha.Text = segundoValor + ",";
+            }
         }
         private void BtnPorcent(object sender, EventArgs e)
         {
