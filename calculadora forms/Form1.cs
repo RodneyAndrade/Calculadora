@@ -9,6 +9,7 @@ namespace calculadora_forms
         private decimal primeiroValor;
         private decimal segundoValor;
         private string operador;
+        private int delete = -1;
 
         public Form1()
         {
@@ -29,6 +30,7 @@ namespace calculadora_forms
                 lblSegundaLinha.Text += valor;
                 segundoValor = Convert.ToDecimal(lblSegundaLinha.Text);
             }
+            delete++;
         }
 
         private void AtribuirOperacao(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace calculadora_forms
                 lblPrimeiraLinha.Text = lblPrimeiraLinha.Text.Replace(operador, operacao);
                 operador = operacao;
             }
-
+            delete = -1;
             lblSegundaLinha.Text = string.Empty;
         }
 
@@ -79,7 +81,7 @@ namespace calculadora_forms
             lblPrimeiraLinha.Text = primeiroValor.ToString() + " " + operador + " " + segundoValor.ToString() + " = ";
 
             primeiroValor = resultadoMatematico;
-
+            
             lblSegundaLinha.Text = resultadoMatematico.ToString();
         }
 
@@ -122,6 +124,7 @@ namespace calculadora_forms
             operador = string.Empty;
             lblPrimeiraLinha.Text = string.Empty;
             lblSegundaLinha.Text = string.Empty;
+            delete = -1;
         }
 
         private void BtnRaizQdrd(object sender, EventArgs e)
@@ -151,7 +154,6 @@ namespace calculadora_forms
 
         private void BtnPonto_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrEmpty(operador))
             {
                 lblSegundaLinha.Text = primeiroValor + ","; 
@@ -184,6 +186,35 @@ namespace calculadora_forms
             {
                 segundoValor = 0;
                 lblSegundaLinha.Text = string.Empty;
+            }
+        }
+
+        private void DividirUm(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(operador))
+            {
+                primeiroValor = Convert.ToDecimal(lblSegundaLinha.Text);
+                resultadoMatematico = 1 / primeiroValor;
+                lblPrimeiraLinha.Text = "1/(" + primeiroValor + ")";
+                lblSegundaLinha.Text = resultadoMatematico.ToString();
+                primeiroValor = resultadoMatematico;
+            }
+            else
+            {
+                segundoValor = Convert.ToDecimal(lblSegundaLinha.Text);
+                resultadoMatematico = 1 / segundoValor;
+                lblPrimeiraLinha.Text = primeiroValor + " " + operador + " 1/(" + segundoValor + ")";
+                lblSegundaLinha.Text = resultadoMatematico.ToString();
+                segundoValor = resultadoMatematico;
+            }
+        }
+
+        private void BotnDeletar(object sender, EventArgs e)
+        {
+            if (delete >= 0)
+            {
+                lblSegundaLinha.Text = lblSegundaLinha.Text.Remove(delete);
+                delete--;
             }
         }
     }

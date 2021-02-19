@@ -52,6 +52,8 @@
             this.btnPotencia = new System.Windows.Forms.Button();
             this.btnPorcentagem = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
+            this.Dividir1 = new System.Windows.Forms.Button();
+            this.BtnDeletar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnZero
@@ -246,7 +248,7 @@
             // 
             // RaizQuadrada
             // 
-            this.RaizQuadrada.Location = new System.Drawing.Point(172, 192);
+            this.RaizQuadrada.Location = new System.Drawing.Point(173, 192);
             this.RaizQuadrada.Name = "RaizQuadrada";
             this.RaizQuadrada.Size = new System.Drawing.Size(75, 60);
             this.RaizQuadrada.TabIndex = 19;
@@ -276,7 +278,7 @@
             // 
             // btnPorcentagem
             // 
-            this.btnPorcentagem.Location = new System.Drawing.Point(10, 126);
+            this.btnPorcentagem.Location = new System.Drawing.Point(12, 126);
             this.btnPorcentagem.Name = "btnPorcentagem";
             this.btnPorcentagem.Size = new System.Drawing.Size(75, 60);
             this.btnPorcentagem.TabIndex = 22;
@@ -286,7 +288,7 @@
             // 
             // btnCE
             // 
-            this.btnCE.Location = new System.Drawing.Point(92, 126);
+            this.btnCE.Location = new System.Drawing.Point(91, 126);
             this.btnCE.Name = "btnCE";
             this.btnCE.Size = new System.Drawing.Size(75, 60);
             this.btnCE.TabIndex = 23;
@@ -294,11 +296,34 @@
             this.btnCE.UseVisualStyleBackColor = true;
             this.btnCE.Click += new System.EventHandler(this.BtnCE);
             // 
+            // Dividir1
+            // 
+            this.Dividir1.Location = new System.Drawing.Point(172, 126);
+            this.Dividir1.Name = "Dividir1";
+            this.Dividir1.Size = new System.Drawing.Size(75, 60);
+            this.Dividir1.TabIndex = 24;
+            this.Dividir1.Text = "1/x";
+            this.Dividir1.UseVisualStyleBackColor = true;
+            this.Dividir1.Click += new System.EventHandler(this.DividirUm);
+            // 
+            // BtnDeletar
+            // 
+            this.BtnDeletar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnDeletar.Location = new System.Drawing.Point(253, 126);
+            this.BtnDeletar.Name = "BtnDeletar";
+            this.BtnDeletar.Size = new System.Drawing.Size(75, 60);
+            this.BtnDeletar.TabIndex = 25;
+            this.BtnDeletar.Text = " ←";
+            this.BtnDeletar.UseVisualStyleBackColor = true;
+            this.BtnDeletar.Click += new System.EventHandler(this.BotnDeletar);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 527);
+            this.Controls.Add(this.BtnDeletar);
+            this.Controls.Add(this.Dividir1);
             this.Controls.Add(this.btnCE);
             this.Controls.Add(this.btnPorcentagem);
             this.Controls.Add(this.btnPotencia);
@@ -358,6 +383,8 @@
         private System.Windows.Forms.Button btnPotencia;
         private System.Windows.Forms.Button btnPorcentagem;
         private System.Windows.Forms.Button btnCE;
+        private System.Windows.Forms.Button Dividir1;
+        private System.Windows.Forms.Button BtnDeletar;
         //private System.Windows.Forms.Label lblSinal;
 
         //private System.Windows.Forms.TextBox Pnumero;
